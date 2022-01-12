@@ -17,24 +17,33 @@
 </head>
 
 <body>
-    <!-- <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i> -->
 
     <header class="header" id="header">
-        <nav class="container">
-            <a href="#" class="nav_log">AFNAN</a>
+        <nav class="nav container">
+           <a href="#home" class="nav_log"> <strong>AF</strong>NAN</a>
             
-            <div class="nav_menu">
+            <div class="nav_menu" id="nav_menu">
                 <ul class="nav_list grid">
-                    <li class="nav_item"><a href="#home" class="nav_link">HOME</a></li>
-                    <li class="nav_item"><a href="#about" class="nav_link">ABOUT Me</a></li>
-                    <li class="nav_item"><a href="#service" class="nav_link">SERVICES</a></li>
-                    <li class="nav_item"><a href="#contact" class="nav_link">CONTACT</a></li>
+                    <li class="nav_item"><a href="#home" class="nav_link active">HOME</a></li>
+                    <li class="nav_item"><a href="#about" class="nav_link active">ABOUT Me</a></li>
+                    <li class="nav_item"><a href="#service" class="nav_link active">SERVICES</a></li>
+                    <li class="nav_item"><a href="#contact" class="nav_link active">CONTACT</a></li>
                 </ul>
+         
+                <i class="fas fa-times nav_close" id="nav_close"></i>
             </div>
+            <div class="nav_btns">
 
+                  <!-- 
+        <i class="fas fa-sun"></i> -->
+                <i class="fas fa-moon change-theme" id="them-button"></i>
+                <div class="nav_toggle" id="nav_toggle">
+                <i class="fas fa-bars"></i>
+                </div>
+            </div>
         </nav>
     </header>
+
     <main class="main">
         <section class="home section" id="home">
             <div class="home_container container grid">
@@ -51,8 +60,9 @@
                         </a>
                     </div>
                     <div class="home_img">
-                        <img src="img/im.png">
+                        <img src="img/im.png" x="12" y="18" class="home_blob_img">
                     </div>
+
                     <div class="home_data">
                         <h1 class="home_title">My name is Afnan</h1>
                         <h3 class="home_subtitle">Web Developer</h3>
@@ -76,11 +86,13 @@
             <span class="section-subtitle">
                 My Technical level
             </span>
-            <div class="skills_container container grig">
-                <!-- skill 1 -->
+            <div class="skills_container container grid">
+                <div>
+                       <!-- skill 1 -->
                 <div class="skills_content skills_open">
                     <div class="skills_header">
-                        <i class="fab fa-brackets-curly skills_icon"></i>
+                         
+                            <i class="fas fa-code skills_icon"></i>
                         <div>
                             <h1 class="skills_title">
                                 Web Developer
@@ -89,7 +101,8 @@
                                 Read More
                             </span>
                         </div>
-                        <i class="fab fa-angle-down skills_arrow"></i>
+                        <i class="fas fa-arrow-down skills_arrow"></i>
+                      
                     </div>
                     <div class="skills_list grid">
                         <div class="skills_data">
@@ -130,52 +143,56 @@
                         </div>
                     </div>
                 </div>
-                <!-- skill 2 -->
-                <div class="skills_content skills_close">
-                    <div class="skills_header">
-                        <i class="fab fa-brackets-curly skills_icon"></i>
-                        <div>
-                            <h1 class="skills_title">
-                                Designer
-                            </h1>
-                            <span class="skills_subtitle">
-                                Read More
-                            </span>
-                        </div>
-                        <i class="fab fa-angle-down skills_arrow"></i>
-                    </div>
-                    <div class="skills_list grid">
-                        <div class="skills_data">
-                            <div class="skills_titles">
-                                <h3 class="skills_name">Photoshop</h3>
-                                <span class="skills_number">95%</span>
-                            </div>
-                            <div class="skills_bar">
-                                <span class="skills_percentage skills_Photoshop"></span>
-                            </div>
-                        </div>
-                        <div class="skills_data">
-                            <div class="skills_titles">
-                                <h3 class="skills_name">Adobe XD</h3>
-                                <span class="skills_number">80%</span>
-                            </div>
-                            <div class="skills_bar">
-                                <span class="skills_percentage skills_Adobe_XD"></span>
-                            </div>
-                        </div>
-                        <div class="skills_data">
-                            <div class="skills_titles">
-                                <h3 class="skills_name">Illustrator</h3>
-                                <span class="skills_number">75%</span>
-                            </div>
-                            <div class="skills_bar">
-                                <span class="skills_percentage skills_Illustrator"></span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+                             <!-- skill 2 -->
+                             <div class="skills_content skills_close">
+                                <div class="skills_header">
+                                   <i class="fas fa-pen-fancy skills_icon"></i>
+                                    <div>
+                                        <h1 class="skills_title">
+                                            Designer
+                                        </h1>
+                                        <span class="skills_subtitle">
+                                            Read More
+                                        </span>
+                                    </div>
+                                    
+                                    <i class="fas fa-arrow-down skills_arrow"></i>
+                                </div>
+                                <div class="skills_list grid">
+                                    <div class="skills_data">
+                                        <div class="skills_titles">
+                                            <h3 class="skills_name">Photoshop</h3>
+                                            <span class="skills_number">95%</span>
+                                        </div>
+                                        <div class="skills_bar">
+                                            <span class="skills_percentage skills_Photoshop"></span>
+                                        </div>
+                                    </div>
+                                    <div class="skills_data">
+                                        <div class="skills_titles">
+                                            <h3 class="skills_name">Adobe XD</h3>
+                                            <span class="skills_number">80%</span>
+                                        </div>
+                                        <div class="skills_bar">
+                                            <span class="skills_percentage skills_Adobe_XD"></span>
+                                        </div>
+                                    </div>
+                                    <div class="skills_data">
+                                        <div class="skills_titles">
+                                            <h3 class="skills_name">Illustrator</h3>
+                                            <span class="skills_number">75%</span>
+                                        </div>
+                                        <div class="skills_bar">
+                                            <span class="skills_percentage skills_Illustrator"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            
             </div>
         </section>
+
 
         <section class="service section" id="service">
             <h2 class="section-title">
@@ -183,9 +200,9 @@
             </h2>
             <span class="section-subtitle">What's the service i can do it</span>
             <div class="service_container container">
-
+               
                 <div class="service_sections">
-                    <div class="service_content">
+                    <div class="service_content" >
                         <!-- service_data1 -->
                         <div class="service_data">
                             <div>
@@ -197,7 +214,7 @@
                                     E-commerce websites and any websites you want it.
                                 </span>
                             </div>
-                            <div>
+                            <div class="service_warrper">
                                 <span class="service_rounder"></span>
                                 <span class="service_line"></span>
                             </div>
@@ -205,7 +222,7 @@
                         <!-- service_data2 -->
                         <div class="service_data">
                             <div></div>
-                            <div>
+                            <div class="service_warrper">
                                 <span class="service_rounder"></span>
                                 <span class="service_line"></span>
                             </div>
@@ -229,7 +246,7 @@
                                     I take pictures and prepare.
                                 </span>
                             </div>
-                            <div>
+                            <div class="service_warrper">
                                 <span class="service_rounder"></span>
                                 <span class="service_line"></span>
                             </div>
@@ -269,7 +286,7 @@
             <span class="section-subtitle">
                 Get in touch
             </span>
-            <div class="contact_container container grig">
+            <div class="contact_container container grid">
                 <div>
                     <div class="contact_info">
                         <i class="fas fa-phone-alt  contact_icon"></i>
@@ -305,7 +322,7 @@
                         </div>
                         <div class="contact_contect">
                             <label for="" class="contact_label">Message</label>
-                            <textarea name="" id="" cols="0" rows="8" class="contact_input contact_inputs" placeholder="Enter Your Message "></textarea>
+                            <textarea name="" id="" cols="0" rows="4" class="contact_input contact_inputs" placeholder="Enter Your Message "></textarea>
                         </div>
                         <div>
                             <a href="#" class="button button-flex">
@@ -329,6 +346,7 @@
                         I'm Engnieer
                     </span>
                 </div>
+               
                 <ul class="footer_links">
                     <li>
                         <a href="#home" class="footer_link">Home</a>
@@ -343,27 +361,31 @@
                         <a href="#contact" class="footer_link">Contact</a>
                     </li>
                 </ul>
+
                 <div class="footer_socials">
-                    <a href="#" class="footer_social">
+                    <a href="#" class="footer_social" target="_blank">
                         <i class="fab fa-facebook"></i>
                     </a>
-                    <a href="#" class="footer_social">
+                    <a href="#" class="footer_social" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="footer_social">
+                    <a href="#" class="footer_social" target="_blank">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="#" class="footer_social">
+                    <a href="#" class="footer_social" target="_blank">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </div>
             </div>
-            <p class="footer_copy">Made with &nbsp;<i class="far fa-heart"></i> &nbsp; afnan </p>
         </div>
     </footer>
     <a href="#" class="scroll-up" id="scroll-up">
         <i class="fas fa-arrow-up scroll-up_icon "></i>
     </a>
+
+    <script src="js/main.js">
+    
+    </script>
 </body>
 
 </html>
