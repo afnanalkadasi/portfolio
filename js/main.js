@@ -112,10 +112,24 @@ window.onload = ()=>{
         });
       }
     }
-    // for(let i = 0; i < filterImg.length; i++) {
-    //   filterImg[i].setAttribute("onclick", "preview(this)");
-    // }
+
 }
+function OnMouseIn(elem) {
+    elem.style.width = "220px";
+    elem.style.hight = "220px";
+}
+function OnMouseOut(elem) {
+    elem.style.width = "100px";
+    elem.style.hight = "100px";
+}
+
+
+
+
+
+
+
+
 
 
 

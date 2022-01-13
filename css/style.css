@@ -794,7 +794,7 @@ nav .items .item{
         overflow: hidden;
     }
     .gallery .image{
-        padding: 7px;
+        padding: 17px;
         width: calc(100%/4);
     }
     .gallery .image.hide{
@@ -822,9 +822,9 @@ nav .items .item{
         vertical-align: middle;
         transition: all 0.3s ease;
     }
-    .gallery .image:hover{
+    /* .gallery .image:hover{
         transform: scale(1.2);
-    }
+    } */
 }
 
 
