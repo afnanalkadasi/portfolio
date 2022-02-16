@@ -1,43 +1,10 @@
 <!DOCTYPE html>
 <html >
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>portfolio</title>
-    <meta name="author" content="afnan alkadasi">
-    <meta name="keywords" content="html,portfolio,css">
-    <meta name="description" content="this is portfolio page for engnieer afnan">
-    <script src="https://kit.fontawesome.com/53e9ef6681.js" crossorigin="anonymous"></script>
-    <link rel='stylesheet' type='text/css' media='all' href='css/style.css'>
-</head>
-<body>
-    <header class="header" id="header">
-        <nav class="nav container nav_back">
-           <a href="#home" class="nav_log"> <strong><i>A</i>F</strong><i>N</i>A<i>N</i></a>
-            
-            <div class="nav_menu" id="nav_menu">
-                <ul class="nav_list grid">
-                    <li class="nav_item"><a href="#home" class="nav_link active">HOME</a></li>
-                    <li class="nav_item"><a href="#about" class="nav_link active">ABOUT Me</a></li>
-                    <li class="nav_item"><a href="#works" class="nav_link active">Works</a></li>
-                    <li class="nav_item"><a href="#service" class="nav_link active">SERVICES</a></li>
-                    <li class="nav_item"><a href="#contact" class="nav_link active">CONTACT</a></li>
-                </ul>
-         
-                <i class="fas fa-times nav_close" id="nav_close"></i>
-            </div>
-            <div class="nav_btns">
 
-                  <!-- 
-                    <i class="fas fa-sun"></i> -->
-                <i class="fas fa-moon change-theme" id="theme-button"></i>
-                <div class="nav_toggle" id="nav_toggle">
-                <i class="fas fa-bars"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
+        <%- include('../partials/head.ejs'); %>
+
+<body>
+            <%- include('../partials/header.ejs'); %> 
 
     <main class="main">
         <section class="home section" id="home">
@@ -360,56 +327,11 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer_bg">
-            <div class="footer_container container grid">
-                <div>
-                    <h1 class="footer_title">
-                        Afnan
-                    </h1>
-                    <span class="footer_subtitle">
-                        I'm Engnieer
-                    </span>
-                </div>
-               
-                <ul class="footer_links">
-                    <li>
-                        <a href="#home" class="footer_link">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about" class="footer_link">About Me</a>
-                    </li>
-                    <li>
-                        <a href="#service" class="footer_link">Works</a>
-                    </li>
-                    <li>
-                        <a href="#service" class="footer_link">Service</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="footer_link">Contact</a>
-                    </li>
-                </ul>
-
-                <div class="footer_socials">
-                    <a href="#" class="footer_social" target="_blank">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="#" class="footer_social" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="footer_social" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="footer_social" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
     <a href="#" class="scroll-up" id="scroll-up">
         <i class="fas fa-arrow-up scroll-up_icon "></i>
     </a>
+ <%- include('../partials/footer.ejs'); %> 
 
     <script src="js/main.js"> </script>
 </body>
