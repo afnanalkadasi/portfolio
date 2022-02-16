@@ -15,7 +15,7 @@ app.use((_, res) => {
     res.end('<h1> Sorry, page not found</h1>');
 });
 
-var port = process.env.Port || 8080
+var port = process.env.PORT || 8080
 app.listen(port, () => {
     console.log('Server running at http://127.0.0.1:45000');
 })
