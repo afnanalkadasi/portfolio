@@ -114,22 +114,6 @@ window.onload = ()=>{
     }
 
 }
-function OnMouseIn(elem) {
-    elem.style.width = "220px";
-    elem.style.hight = "220px";
-}
-function OnMouseOut(elem) {
-    elem.style.width = "100px";
-    elem.style.hight = "100px";
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -143,6 +127,8 @@ var submit = document.getElementById("submit");
 //name
 
 var Name_input=function(){
+  console.log("here the name ");
+  
     if(usrName.value.length < 3){
       document.getElementById("error").innerHTML="less 3";
       return false;
@@ -162,24 +148,21 @@ var Name_input=function(){
     }
 }
 
-usrName.oninput=function(){
 
-Name_input();
-}
-
+let x = document.getElementById("email");
   // email
 var email_input=function(){
 
-  var x = document.getElementById("email").value;
-  var atpos = x.indexOf("@");
   
-  var dotpos = x.lastIndexOf(".");
+  var atpos = x.value.indexOf("@");
   
-  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+  var dotpos = x.value.lastIndexOf(".");
+  
+  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.value.length) {
   document.getElementById("error2").innerHTML="Enter valid e-mail address";
   return false;
   }else{
-   
+    document.getElementById("error2").innerHTML="True";
     return true;
   }
 }
@@ -201,22 +184,23 @@ var email_input=function(){
       }
 }
 
-mes_text.oninput=function(){
- 
-  txtarea_input();
-}
-  
+
 submit.addEventListener("click",(e)=>{
     e.preventDefault();
    console.log('test');
-   Name_input();
-   email_input();
-   txtarea_input();
+  //  Name_input();
+  //  email_input();
+  //  txtarea_input();
+ console.log(Name_input());
+ console.log(email_input());
+ console.log(txtarea_input());
  
    
-   if(Name_input()==true && 
-   email_input()==true&&
-   txtarea_input()==true){
+   if(Name_input() && 
+   email_input()&&
+   txtarea_input()){
+     console.log('true');
+     
     usrName.value='';
     x.value='';
     mes_text.value='';

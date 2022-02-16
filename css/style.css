@@ -246,23 +246,56 @@ img{
     grid-column: 1/4;
 }
 .home_title{
-    font-size: var(--big-font-size);
-    animation: movebanner 1.5s 0.5s forwards;
+    font-size: var(--h1-font-size);
+  
 }
-.home_subtitle{
-    font-style: var(--h3-font-size);
-    color: var(--text-color);
-    font-weight: var(--font-medium);
-    margin-bottom: var(--mb-0-75);
-    animation: movebanner 1.5s 0.5s forwards;
+.warpper{
+    display: inline-flex;
+}
+.warpper .static-txt{
+    color: var(--first-color);
+
+}
+.warpper .dynamic-txts{
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+  
+}
+.dynamic-txts li{
+    list-style: none;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(3) infinite;
+}
+@keyframes slide{
+    100%{
+        top: -300px;
+    }
+    }
+
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--body-color);
+    /* border-left: 1px solid black; */
+    animation: typing 1.5s steps(10) infinite;
+}
+@keyframes typing{
+100%{
+    left: 100%;
+    margin: 0 -35px 0 35px;
+}
 }
 .home_description{
     margin-bottom: var(--mb-2);
-    animation: movebanner 1.5s 0.5s forwards;
 }
-.home_data > .button{
-    animation: movebanner 1.5s 0.5s forwards;
-}
+
+
 .button{
     display: inline-block;
     background-color: var(--first-color);
@@ -281,8 +314,9 @@ img{
 .button-flex{
     display: inline-flex;
     align-items: center;
+    cursor: pointer;
 }
-@keyframes movebanner{
+/* @keyframes movebanner{
     0%{
         transform: translateX(40rem)rotate(-20deg);
     }
@@ -290,7 +324,7 @@ img{
         transform: translateX(0)rotate(0);
         opacity: 1;
     }
-    }
+    } */
 
 .skills_container{
     row-gap: 0;
